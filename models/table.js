@@ -14,35 +14,35 @@ module.exports = function(sequelize, DataTypes) {
   var Products = sequelize.define("Products", {
   });
 
-  var Meats = sequelize.define("Meats"  {
+  var Meats = sequelize.define("Meats",  {
     meat_name: DataTypes.TEXT,
     meat_amt: DataTypes.STRING
   });
 
-  var Dairy = sequelize.define("Dairy"  {
+  var Dairy = sequelize.define("Dairy",  {
     dairy_name: DataTypes.TEXT,
     dairy_amt: DataTypes.STRING
   });
 
-  var Produce = sequelize.define("Produce"  {
+  var Produce = sequelize.define("Produce",  {
     produce_name: DataTypes.TEXT,
     produce_amt: DataTypes.STRING
   });
 
   //Add farmersID to Farm
-  Farmers.belongsto(Farm);
+  Farmers.belongsTo(Farms);
 
   //Add productsID to Farm
-  Products.belongsto(Farm);
+  Products.belongsTo(Farms);
 
   //Adds meatsID to Products
-  Meats.belongsto(Products);
+  Meats.belongsTo(Products);
 
   //Adds dairyID to Products
-  Dairy.belongsto(Products);
+  Dairy.belongsTo(Products);
 
   //Adds produceID to Products
-  Produce.belongsto(Products);
+  Produce.belongsTo(Products);
 
 
   // return Farms;
