@@ -1,30 +1,30 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
 
   //Table creation for farmer in sequelize
-  
+
   var Farmers = sequelize.define("Farmers", {
     first_name: DataTypes.TEXT,
     last_name: DataTypes.TEXT
   });
 
-  var Farms = sequelize.define("Farms",   {
+  var Farms = sequelize.define("Farms", {
     farm_name: DataTypes.TEXT
   });
 
   var Products = sequelize.define("Products", {
   });
 
-  var Meats = sequelize.define("Meats",  {
+  var Meats = sequelize.define("Meats", {
     meat_name: DataTypes.TEXT,
     meat_amt: DataTypes.STRING
   });
 
-  var Dairy = sequelize.define("Dairy",  {
+  var Dairy = sequelize.define("Dairy", {
     dairy_name: DataTypes.TEXT,
     dairy_amt: DataTypes.STRING
   });
 
-  var Produce = sequelize.define("Produce",  {
+  var Produce = sequelize.define("Produce", {
     produce_name: DataTypes.TEXT,
     produce_amt: DataTypes.STRING
   });
@@ -45,15 +45,15 @@ module.exports = function(sequelize, DataTypes) {
   Produce.belongsTo(Products);
 
 
-  // return Farms;
+  return Farms;
 
-  // return Farmers;
+  return Farmers;
 
-  // return Products;
+  return Products;
 
-  // return Meats;
+  return Meats;
 
-  // return Produce;
+  return Produce;
 
-  // return Dairy
+  return Dairy
 };
