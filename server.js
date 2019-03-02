@@ -1,9 +1,15 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var jwt = require('express-jwt');
 
-var db = require("./models");
-
+var auth = jwt({
+  secret: process.env.JWT_SECRET,
+  userProperty: 'payload'
+});
+var models = require("./models");
+var authRoutes = require("./routes/auth.routes");
+var apiRoutes = require("./routes/api.routes");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -22,8 +28,10 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+
+app.use("/auth", authRoutes);
+app.use(auth);
+app.use("/api", apiRoutes);
 
 var syncOptions = { force: false };
 
@@ -34,7 +42,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
+models.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
