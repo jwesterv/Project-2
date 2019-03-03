@@ -28,7 +28,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-
+require("./routes/htmlRoutes")(app);
 app.use("/auth", authRoutes);
 app.use(auth);
 app.use("/api", apiRoutes);
