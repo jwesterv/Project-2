@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-require("./routes/htmlRoutes")(app);
+require("./routes/html.routes")(app);
 app.use("/auth", authRoutes);
 app.use(auth);
 app.use("/api", apiRoutes);
