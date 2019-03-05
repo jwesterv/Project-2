@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
     farm_address: DataTypes.TEXT,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
-    zipcode: DataTypes.INTEGER.TEXT,
+    zipcode: DataTypes.STRING,
     deliver: DataTypes.BOOLEAN
   });
 
