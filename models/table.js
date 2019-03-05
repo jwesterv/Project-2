@@ -2,38 +2,47 @@ module.exports = function (sequelize, DataTypes) {
 
   //Table creation for farmer in sequelize
 
-  var Farmers = sequelize.define("Farmers", {
+  var Formdata = sequelize.define("Formdata", {
     first_name: DataTypes.TEXT,
     last_name: DataTypes.TEXT,
     website: DataTypes.STRING,
     description: DataTypes.TEXT,
     phone: DataTypes.STRING,
-    email: DataTypes.STRING
-  });
-
-  var Farms = sequelize.define("Farms", {
+    email: DataTypes.STRING,
     farm_name: DataTypes.TEXT,
     farm_address: DataTypes.TEXT,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zipcode: DataTypes.STRING,
-    deliver: DataTypes.BOOLEAN
+    deliver: DataTypes.BOOLEAN,
+    option: DataTypes.STRING,
   });
 
-  var Products = sequelize.define("Products", {
-  });
+  // var Farms = sequelize.define("Farms", {
+  //   farm_name: DataTypes.TEXT,
+  //   farm_address: DataTypes.TEXT,
+  //   city: DataTypes.STRING,
+  //   state: DataTypes.STRING,
+  //   zipcode: DataTypes.STRING,
+  //   deliver: DataTypes.BOOLEAN
+  // });
 
-  //Add farmersID to Farm
-  Farmers.belongsTo(Farms);
+  // var Products = sequelize.define("Products", {
+  //   type: DataTypes.STRING,
+  // });
 
-  //Add productsID to Farm
-  Products.belongsTo(Farms);
+  // //Add farmersID to Farm
+  // Farmers.belongsTo(Farms);
 
+  // //Add productsID to Farm
+  // Products.belongsTo(Farms);
 
-  return Farms;
+  return Formdata;
 
-  return Farmers;
+  // return Farms;
 
-  return Products;
+  // return Farmers;
+
+  // return Products;
 
 };
