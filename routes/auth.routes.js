@@ -48,7 +48,7 @@ router.post("/login", function(req, res) {
             });
         }
         else {
-            throw new Error("password no matchy");
+            throw new Error("Password is not a match");
         }
     })
     .catch(function(err) {
