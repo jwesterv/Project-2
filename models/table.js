@@ -4,29 +4,23 @@ module.exports = function (sequelize, DataTypes) {
 
   var Farmers = sequelize.define("Farmers", {
     first_name: DataTypes.TEXT,
-    last_name: DataTypes.TEXT
+    last_name: DataTypes.TEXT,
+    website: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    phone: DataTypes.STRING,
+    email: DataTypes.STRING
   });
 
   var Farms = sequelize.define("Farms", {
-    farm_name: DataTypes.TEXT
+    farm_name: DataTypes.TEXT,
+    farm_address: DataTypes.TEXT,
+    city: DataTypes.STRING,
+    state: DataTypes.STRING,
+    zipcode: DataTypes.STRING,
+    deliver: DataTypes.BOOLEAN
   });
 
   var Products = sequelize.define("Products", {
-  });
-
-  var Meats = sequelize.define("Meats", {
-    meat_name: DataTypes.TEXT,
-    meat_amt: DataTypes.STRING
-  });
-
-  var Dairy = sequelize.define("Dairy", {
-    dairy_name: DataTypes.TEXT,
-    dairy_amt: DataTypes.STRING
-  });
-
-  var Produce = sequelize.define("Produce", {
-    produce_name: DataTypes.TEXT,
-    produce_amt: DataTypes.STRING
   });
 
   //Add farmersID to Farm
@@ -35,15 +29,6 @@ module.exports = function (sequelize, DataTypes) {
   //Add productsID to Farm
   Products.belongsTo(Farms);
 
-  //Adds meatsID to Products
-  Meats.belongsTo(Products);
-
-  //Adds dairyID to Products
-  Dairy.belongsTo(Products);
-
-  //Adds produceID to Products
-  Produce.belongsTo(Products);
-
 
   return Farms;
 
@@ -51,9 +36,4 @@ module.exports = function (sequelize, DataTypes) {
 
   return Products;
 
-  return Meats;
-
-  return Produce;
-
-  return Dairy
 };
