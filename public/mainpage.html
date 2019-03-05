@@ -37,6 +37,7 @@
     <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px"
         id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+        <a href="#all" onclick="filterSelection('all')" class="w3-bar-item w3-button">Show All</a>
         <a href="#meats" onclick="filterSelection('meats')" class="w3-bar-item w3-button">Meats</a>
         <a href="#fruits" onclick="filterSelection('fruits')" class="w3-bar-item w3-button">Fruits</a>
         <a href="#vegetables" onclick="filterSelection('vegetables')" class="w3-bar-item w3-button">Vegetables</a>
@@ -62,27 +63,27 @@
         <!-- First Photo Grid-->
         <div class="w3-row-padding w3-padding-16 w3-center" id="food">
             <div class="w3-quarter">
-                <img src="http://www.takepart.com/sites/default/files/styles/large/public/garlic-farm.jpg" alt="Farm"
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/New_crops-Chicago_urban_farm.jpg" alt="Farm"
                     style="width:100%">
-                <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+                <h3 onclick="myFunction()">Farmer 1</h3>
                 <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <img src="https://www.agri-pulse.com/ext/resources/images/Agriculture-photos/Farmscapes/Farm1.jpg?1509734744"
+                <img src="https://www.kbcc.cuny.edu/cewd/PublishingImages/aerial.jpg"
                     alt="Farm" style="width:100%">
-                <h3>Let Me Tell You About This Steak</h3>
+                <h3 onclick="myFunction()">Farmer 2</h3>
                 <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <img src="https://www.fb.org/images/uploads/rural/_935w/farmbarns_featured.png" alt="Farm" style="width:100%">
-                <h3>Cherries, interrupted</h3>
+                <img src="https://static1.squarespace.com/static/59765fd317bffcafaf5ff75c/t/5b6de3830ebbe8da669da4fd/1533928327520/future+with+urban+farming.jpg?format=1000w" alt="Farm" style="width:100%">
+                <h3 onclick="myFunction()">Farmer 3</h3>
                 <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
                 <p>What else?</p>
             </div>
             <div class="w3-quarter">
-                <img src="https://civileats.com/wp-content/uploads/2018/04/180416-2018-farm-bill-top2.jpg" alt="Farm"
+                <img src="https://www.greenroofs.com/wp-content/uploads/2018/09/ryerson_urban_farm9.jpg" alt="Farm"
                     style="width:100%">
-                <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+                <h3 onclick="myFunction()">Farmer 4</h3>
                 <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
         </div>
@@ -90,38 +91,27 @@
         <!-- Second Photo Grid-->
         <div class="w3-row-padding w3-padding-16 w3-center">
             <div class="w3-quarter">
-                <img src="https://fismt.com/wp-content/uploads/2018/01/farmandranchinsurance.jpg" alt="Farm" style="width:100%">
+                <img src="http://www.louisvillegrows.org/wp-content/uploads/2014/03/0412171335a-1.jpg" alt="Farm" style="width:100%">
                 <h3>All I Need Is a Popsicle</h3>
                 <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <img src="http://sustainableagriculture.net/wp-content/uploads/2017/10/20170807_162736-e1507141962569.jpg"
+                <img src="http://ediblemichiana.ediblecommunities.com/sites/default/files/styles/ariticle_feartured_image_landscape/public/images/article/South-Bend-Homestead-urban-farm.jpg?itok=Br0dMJoH"
                     alt="Farm" style="width:100%">
                 <h3>Salmon For Your Skin</h3>
                 <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <img src="https://1yd7z7koz052nb8r33cfxyw5-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Adams_Township_Sunny_Farm.jpg"
+                <img src="https://media.wired.com/photos/5a8758e8915fc539b509aa1b/master/pass/urbanfarmhk-490580465.jpg"
                     alt="Farm" style="width:100%">
                 <h3>The Perfect Sandwich, A Real Classic</h3>
                 <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <img src="http://billevansins.wpengine.com/wp-content/uploads/2014/04/palouse-farm-country-eastern-washington.jpg"
+                <img src="https://images.adsttc.com/media/images/526e/b98b/e8e4/4ef4/c200/05f1/large_jpg/1314985292-urban-farm-2.jpg?1382988166"
                     alt="Farm" style="width:100%">
                 <h3>Le French</h3>
                 <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-            </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="w3-center w3-padding-32">
-            <div class="w3-bar">
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-                <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
             </div>
         </div>
 
