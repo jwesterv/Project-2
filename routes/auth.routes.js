@@ -25,10 +25,16 @@ router.post("/register", function(req, res) {
     })
 })
 
-router.post("/login", function(req, res) {
+router.post("login", function(req, res) {
+
+console.log("/auth/logi");
+
     if(!req.body.password || !req.body.email) {
         return res.status(400).json({msg: new Error("Please put all data on body")});
+    
     }
+console.log(req.body.password, req.body.email)
+
     models.User.findOne({
         where : {
             email: req.body.email
