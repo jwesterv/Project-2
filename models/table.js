@@ -15,7 +15,7 @@ module.exports = function (sequelize, DataTypes) {
     state: DataTypes.STRING,
     zipcode: DataTypes.STRING,
     deliver: DataTypes.BOOLEAN,
-    type: DataTypes.STRING,
+    option: DataTypes.STRING,
   });
 
   // var Farms = sequelize.define("Farms", {
@@ -37,11 +37,12 @@ module.exports = function (sequelize, DataTypes) {
   // //Add productsID to Farm
   // Products.belongsTo(Farms);
 
+  return Formdata;
 
-  return Farms;
+  // return Farms;
 
-  return Farmers;
+  // return Farmers;
 
-  return Products;
+  // return Products;
 
 };
