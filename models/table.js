@@ -14,35 +14,10 @@ module.exports = function (sequelize, DataTypes) {
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zipcode: DataTypes.STRING,
-    deliver: DataTypes.BOOLEAN,
+    deliver: DataTypes.STRING,
     option: DataTypes.STRING,
   });
 
-  // var Farms = sequelize.define("Farms", {
-  //   farm_name: DataTypes.TEXT,
-  //   farm_address: DataTypes.TEXT,
-  //   city: DataTypes.STRING,
-  //   state: DataTypes.STRING,
-  //   zipcode: DataTypes.STRING,
-  //   deliver: DataTypes.BOOLEAN
-  // });
-
-  // var Products = sequelize.define("Products", {
-  //   type: DataTypes.STRING,
-  // });
-
-  // //Add farmersID to Farm
-  // Farmers.belongsTo(Farms);
-
-  // //Add productsID to Farm
-  // Products.belongsTo(Farms);
-
   return Formdata;
-
-  // return Farms;
-
-  // return Farmers;
-
-  // return Products;
 
 };
