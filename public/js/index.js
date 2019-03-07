@@ -1,4 +1,4 @@
-$(".searchBtn").on("click", function(event) {
+$(".searchBtn").on("click", function (event) {
   event.preventDefault();
   var zipcode = $(this).val().trim();
  
@@ -16,7 +16,20 @@ $.ajax("/consumer/" {
     }
 )
 
-  
+
+  $.ajax("/consumer/"({
+    type: "GET",
+    data: "data"
+  })
+    .then(
+      function () {
+        location.assign("consumer.html");
+      })
+    .catch(
+      function (err) {
+        if (err) throw err;
+      }
+    )
 });
 
 
