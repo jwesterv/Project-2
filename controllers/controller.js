@@ -30,29 +30,29 @@ router.get("/consumer", function (req, res) {
 
     });
 
-    router.post("/api/create", function (req, res) {
+    // router.post("/api/create", function (req, res) {
 
-        FormData.create(
-            {
-                first_name: ,
-                last_name: ,
-                website: ,
-                description: ,
-                phone: ,
-                email: ,
-                farm_name: ,
-                farm_address: ,
-                city: ,
-                state: ,
-                zipcode: ,
-                deliver: ,
-                option: 
+    //     FormData.create(
+    //         {
+    //             first_name: ,
+    //             last_name: ,
+    //             website: ,
+    //             description: ,
+    //             phone: ,
+    //             email: ,
+    //             farm_name: ,
+    //             farm_address: ,
+    //             city: ,
+    //             state: ,
+    //             zipcode: ,
+    //             deliver: ,
+    //             option: 
 
-            }).then(function () {
-                res.redirect("/consumer");
-            })
+    //         }).then(function () {
+    //             res.redirect("/consumer");
+    //         })
 
-    });
+    // });
 
     //update the db to devoured true
     router.post("/api/update/:id", function (req, res) {
