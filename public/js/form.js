@@ -58,8 +58,8 @@ $(document).ready(function () {
     };
 
     // Submits a form and redirect user to blog page upon completion
-    function submitPost(Post) {
-        $.post("/api/posts/", Post, function () {
+    function submitPost(Formdata) {
+        $.post("/api/posts/", Formdata, function () {
             window.location.href = "/profile";
         });
     };
@@ -97,7 +97,7 @@ $(document).ready(function () {
             data: post
         })
             .then(function () {
-                window.location.href = "/blog";
+                window.location.href = "/profile";
             });
     }
 
