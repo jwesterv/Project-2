@@ -13,6 +13,16 @@ router.get("/", function (req, res) {
     res.json(results);
   });
 
+  router.get("/consumer", function (req, res) {
+
+    Farms.findAll({
+      where: {
+        zipcode: req.params.zipcode
+      }}).then(function (results) {
+  
+      res.json(results);
+    });
+
   //create a burger, push to mysql, redirect to / to show new burger
   router.post("/api/create", function (req, res) {
 
