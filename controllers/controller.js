@@ -14,21 +14,21 @@ router.get("/consumer", function (req, res) {
             res.json(results);
         });
 
-    //create a farm, push to mysql, redirect to / to show new burger
-    router.post("/api/create", function (req, res) {
+    //create a farm, push to mysql, redirect to / consumer
+    // router.post("/api/create", function (req, res) {
 
-        Farms.create(
-            {
-                farm_name: req.body.farmNameText,
-                img_src = req.body.imageText,
-                zipcode = req.body.zipcodeText,
-                description = req.body.descriptionText
+    //     Farms.create(
+    //         {
+    //             farm_name: req.body.farmNameText,
+    //             img_src = req.body.imageText,
+    //             zipcode = req.body.zipcodeText,
+    //             description = req.body.descriptionText
 
-            }).then(function () {
-                res.redirect("/consumer");
-            })
+    //         }).then(function () {
+    //             res.redirect("/consumer");
+    //         })
 
-    });
+    // });
 
     // router.post("/api/create", function (req, res) {
 

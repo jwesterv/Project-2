@@ -9,6 +9,7 @@ var auth = jwt({
 var models = require("./models");
 var authRoutes = require("./routes/auth.routes");
 var apiRoutes = require("./routes/api.routes");
+var Routes = require("./controllers/controller.js");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -22,6 +23,7 @@ require("./routes/html.routes")(app);
 app.use("/auth", authRoutes);
 app.use(auth);
 app.use("/api", apiRoutes);
+app.use(Routes);
 
 var syncOptions = { force: false };
 
