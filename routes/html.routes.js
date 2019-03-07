@@ -29,9 +29,9 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   });
 
-  //Path holder
-  app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/"));
+  //Consumer route
+  app.get("/consumer", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/consumer.html"));
   });
 
   //Path holder

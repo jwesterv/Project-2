@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png"
+        href="https://png.pngtree.com/element_origin_min_pic/17/02/16/a37ea51ac385c9920c6994529a745f04.jpg">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -64,8 +66,17 @@
         <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
             <div class="container"><a class="navbar-brand" href="#">OC Community FarmAssist</a><button class="navbar-toggler"
                     data-toggle="collapse" data-target="#navcol-1"></button>
-                <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ml-auto" role="button"
-                        href="#">Sign In</a></div>
+                    <div class="login">
+                            Email:
+                            <input id="email" /> Password:
+                            <input id="password" />
+                            <button id="submit" class="btn btn-primary">Sign In!</button>
+                        </div>
+                        <div class="redirect" style="display: none">
+                            Redirecting now...
+                            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                            <span class="sr-only">Loading...</span>
+                        </div>
             </div>
         </nav>
         <header class="masthead text-white text-center">
@@ -79,9 +90,9 @@
                         <form>
                             <div class="form-row">
                                 <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg"
-                                        type="email" placeholder="Enter your email..."></div>
+                                        type="email" placeholder="Enter your zipcode..."></div>
                                 <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg"
-                                        type="submit">Sign up!</button></div>
+                                        type="submit">Search!</button></div>
                             </div>
                         </form>
                     </div>
@@ -89,6 +100,7 @@
             </div>
         </header>
         <section class="features-icons bg-light text-center">
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
@@ -96,7 +108,7 @@
                             <div class="d-flex features-icons-icon"><i class="icon-screen-desktop m-auto text-primary"
                                     data-bs-hover-animate="pulse"></i></div>
                             <h3>SUBSCRIBE</h3>
-                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                            <p class="lead mb-0">Enter your zipcode to find and subscribe to local farms</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -104,8 +116,8 @@
                             <div class="d-flex features-icons-icon"><i class="fas fa-seedling m-auto text-primary"
                                     data-bs-hover-animate="pulse"></i></div>
                             <h3>HARVEST</h3>
-                            <p class="lead mb-0">After recieving your order, your local farmer will harvest and deliver
-                                on their set delivery day</p>
+                            <p class="lead mb-0">After recieving your order, your farmer will harvest and deliver
+                                on their listed delivery day</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -113,29 +125,44 @@
                             <div class="d-flex features-icons-icon"><i class="fas fa-utensil-spoon m-auto text-primary"
                                     data-bs-hover-animate="pulse"></i></div>
                             <h3>EAT</h3>
-                            <p class="lead mb-0">Enjoy FRESH, LOCAL food with friends and family!</p>
+                            <p class="lead mb-0">Enjoy FRESH, LOCAL food with friends and family every week!</p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
         <section class="showcase">
+            <div class="mr-5 ml-5 mt-5 mb-5">
+                <h1 class="text-center text-justify">Urban Farms?</h1>
+                <p class="lead mb-0">In 2008, Philadelphia’s 226 communityand squatter gardens grew roughly 2 million
+                    pounds of mid-summer vegetables and herbs, worth $4.9 million. Running at full bore, Brooklyn’s 
+                    Added-Value Farm, which occupies 2.75 acres, funnels 40,000 pounds of fruit and vegetables into the 
+                    low-income neighborhood of Red Hook.
+
+                    And in Camden, New Jersey — an extremely poor city of 80,000 with only one full-service supermarket
+                    — community gardeners at 44 sites harvested almost 31,000 pounds of vegetables during an unusually wet and cold
+                    summer. That’s enough food during the growing season to feed 508 people three servings a day.</p>
+            </div>
+
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img"><img
                             src="assets/img/UF-Page_header-1030x1030.jpg" height="550" width="750"></div>
-                    <div class="col-lg-6 my-auto order-lg-1 showcase-text">
-                        <h2>Urban Farming</h2>
-                        <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed
-                            vulputate mi sit amet. Scelerisque eleifend donec pretium vulputate sapien nec sagittis
-                            aliquam malesuada. Dui vivamus arcu felis bibendum ut tristique et egestas. Sit amet commodo
-                            nulla facilisi nullam vehicula ipsum a. Tempus egestas sed sed risus pretium quam. At augue
-                            eget arcu dictum varius duis at consectetur. Leo integer malesuada nunc vel. Amet nisl
-                            suscipit adipiscing bibendum est ultricies integer. Felis donec et odio pellentesque diam
-                            volutpat commodo sed egestas. At lectus urna duis convallis convallis tellus id. Volutpat
-                            sed cras ornare arcu dui. Tellus mauris a diam maecenas. Faucibus et molestie ac feugiat
-                            sed.</p>
+                    <div class="col-lg-6 my-auto order-lg-1 showcase-text text-justify">
+                        <h2>Environmental Impacts</h2>
+                        <p class="lead mb-0"> Industrial agriculture is a major source of fossil fuel pollution.
+                            Petrochemicals are used to fertilize, spray, and preserve food. Plastics made from oil
+                            are used to package the food, and gasoline is used to transport food worldwide. Urban
+                            farming unplugs us from oil by minimizing the transport footprint and using organic
+                            cultivation methods.
+
+                            While industrial agriculture often maneuvers to avoid paying for environmental
+                            externalities, urban farmers directly bear the ecological costs of their actions.
+                            This makes urban farmers better stewards of their land because they draw their nutrition
+                            from it. Rather than using chemicals that destroy soil biology, urban farming culture
+                            stresses
+                            sustainable organic techniques that enrich the topsoil. </p>
                     </div>
                 </div>
                 <div class="row no-gutters">
@@ -144,33 +171,25 @@
                             height="550" width="750"></div>
                     <div class="col-lg-6 my-auto order-lg-1 showcase-text">
                         <h2>Keeping it Local</h2>
-                        <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed
-                            vulputate mi sit amet. Scelerisque eleifend donec pretium vulputate sapien nec sagittis
-                            aliquam malesuada. Dui vivamus arcu felis bibendum ut tristique et egestas. Sit amet commodo
-                            nulla facilisi nullam vehicula ipsum a. Tempus egestas sed sed risus pretium quam. At augue
-                            eget arcu dictum varius duis at consectetur. Leo integer malesuada nunc vel. Amet nisl
-                            suscipit adipiscing bibendum est ultricies integer. Felis donec et odio pellentesque diam
-                            volutpat commodo sed egestas. At lectus urna duis convallis convallis tellus id. Volutpat
-                            sed cras ornare arcu dui. Tellus mauris a diam maecenas. Faucibus et molestie ac feugiat
-                            sed.</p>
+                        <p class="lead mb-0 text-justify">Local food supports the local economy. The money that is spent with local farmers and 
+                                growers all stays close to home and is reinvested with businesses and services in your 
+                                community. Also, local growers can tell you how the food was grown. You can ask what practices they use 
+                                to raise and harvest the crops. When you know where your food comes from and who grew it, 
+                                you know a lot more about that food.</p>
+                            <p></p>
+                            <p class="lead mb-0 text-justify">
+                            </p>
                     </div>
                 </div>
                 <div class="row no-gutters">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img"><img src="assets/img/farmshare.jpg"
                             height="550" width="750"></div>
                     <div class="col-lg-6 my-auto order-lg-1 showcase-text">
-                        <h2><strong>Convenience</strong></h2>
-                        <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ultricies integer quis auctor elit sed
-                            vulputate mi sit amet. Scelerisque eleifend donec pretium vulputate sapien nec sagittis
-                            aliquam malesuada. Dui vivamus arcu felis bibendum ut tristique et egestas. Sit amet commodo
-                            nulla facilisi nullam vehicula ipsum a. Tempus egestas sed sed risus pretium quam. At augue
-                            eget arcu dictum varius duis at consectetur. Leo integer malesuada nunc vel. Amet nisl
-                            suscipit adipiscing bibendum est ultricies integer. Felis donec et odio pellentesque diam
-                            volutpat commodo sed egestas. At lectus urna duis convallis convallis tellus id. Volutpat
-                            sed cras ornare arcu dui. Tellus mauris a diam maecenas. Faucibus et molestie ac feugiat
-                            sed.</p>
+                        <h2><strong>Flavor</strong></h2>
+                        <p class="lead mb-0 text-justify">Eating local food is eating seasonally. Even though we wish strawberries were 
+                                grown year round, the best time to eat them is when they can be purchased directly 
+                                from a local grower. They are full of flavor and taste better than the ones available in the 
+                                winter that have traveled thousands of miles and picked before they were ripe.</p>
                     </div>
                 </div>
             </div>
@@ -213,15 +232,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 mx-auto">
-                        <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+                        <h2 class="mb-4">Ready to eat fresh produce?</h2>
                     </div>
                     <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                         <form>
                             <div class="form-row">
                                 <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg"
-                                        type="email" placeholder="Enter your email..."></div>
+                                        type="email" placeholder="Enter your zipcode..."></div>
                                 <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg"
-                                        type="submit">Sign up!</button></div>
+                                        type="submit">Search!</button></div>
                             </div>
                         </form>
                     </div>
@@ -258,6 +277,32 @@
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
         <script src="/assets/js/script.min.js?h=82d712d5e0811380f26d2753ca68c860"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $("#submit").on("click", function (e) {
+                e.preventDefault();
+                var email = $("#email").val();
+                var password = $("#password").val();
+    
+                axios.post("/auth/login", {
+                    email: email,
+                    password: password
+                })
+                    .then(function (resp) {
+                        console.log(resp);
+                        window.localStorage.setItem("token", resp.data.token);
+                        $(".login").hide();
+                        $(".redirect").show();
+                        window.setTimeout(function () {
+                            window.location.assign("/check.html")
+                        }, 2000)
+                    })
+                    .catch(function (err) {
+                        console.error(err);
+                    })
+            })
+        </script>
     </body>
 
     </html>
