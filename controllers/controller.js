@@ -10,7 +10,7 @@ router.get("/consumer", function (req, res) {
 
     Farms.findAll({})
         .then(function (results) {
-
+console.log(results);
             res.json(results);
         });
 

@@ -9,7 +9,7 @@ var auth = jwt({
 var models = require("./models");
 var authRoutes = require("./routes/auth.routes");
 var apiRoutes = require("./routes/api.routes");
-var Routes = require("./controllers/controller.js");
+var Routes = require("./controllers/controller");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
