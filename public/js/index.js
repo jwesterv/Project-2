@@ -1,22 +1,20 @@
-$(".searchBtn").on("click", function(event) {
+$(".searchBtn").on("click", function (event) {
   event.preventDefault();
-  
- 
-$.ajax("/consumer/" {
-  type: "GET",
-  data: "data"
-})
-.then(
-  function() {
-      location.assign("consumer.html");
-    })
-.catch(
-    function(err){
-        if (err) throw err;
-    }
-)
 
-  
+
+  $.ajax("/consumer/"({
+    type: "GET",
+    data: "data"
+  })
+    .then(
+      function () {
+        location.assign("consumer.html");
+      })
+    .catch(
+      function (err) {
+        if (err) throw err;
+      }
+    )
 });
 
 
