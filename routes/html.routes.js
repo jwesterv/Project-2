@@ -30,7 +30,7 @@ module.exports = function (app) {
   });
 
   //Consumer route
-  app.get("/", function (req, res) {
+  app.get("/consumer", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/consumer.html"));
   });
 
