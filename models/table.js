@@ -3,14 +3,14 @@ module.exports = function (sequelize, DataTypes) {
   //Table creation for farmer in sequelize
 
   var Formdata = sequelize.define("Formdata", {
-    first_name: DataTypes.TEXT,
-    last_name: DataTypes.TEXT,
+    first_name: DataTypes.STRING,
+    last_name: DataTypes.STRING,
     website: DataTypes.STRING,
-    description: DataTypes.TEXT,
+    description: DataTypes.STRING,
     phone: DataTypes.STRING,
     email: DataTypes.STRING,
-    farm_name: DataTypes.TEXT,
-    farm_address: DataTypes.TEXT,
+    farm_name: DataTypes.STRING,
+    farm_address: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zipcode: DataTypes.STRING,
@@ -19,5 +19,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   return Formdata;
+
+  
 
 };

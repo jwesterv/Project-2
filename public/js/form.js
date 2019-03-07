@@ -35,13 +35,13 @@ $(document).ready(function () {
         first_name: firstNameInput.val().trim(),
         last_name: lastNameInput.val().trim(),
         farm_name: farmNameInput.val().trim(),
-        description: descriptionInput.val(),
-        option: optionInput.val(),
-        deliver: deliverInput.val(),
+        description: descriptionInput.val().trim(),
+        option: optionInput.val().trim(),
+        deliver: deliverInput.val().trim(),
         phone: phoneInput.val().trim(),
         email: emailInput.val().trim(),
         website: websiteInput.val().trim(),
-        farm_address: farmAddressInput.val(),
+        farm_address: farmAddressInput.val().trim(),
         city: cityInput.val().trim(),
         state: stateInput.val().trim(),
         zipcode: zipcodeInput.val().trim()
@@ -72,13 +72,13 @@ $(document).ready(function () {
                 firstNameInput.val().trim();
                 lastNameInput.val().trim();
                 farmNameInput.val().trim();
-                descriptionInput.val();
-                optionInput.val();
-                deliverInput.val();
+                descriptionInput.val().trim();
+                optionInput.val().trim();
+                deliverInput.val().trim();
                 phoneInput.val().trim();
                 emailInput.val().trim();
                 websiteInput.val().trim();
-                farmAddressInput.val();
+                farmAddressInput.val().trim();
                 cityInput.val().trim();
                 stateInput.val().trim();
                 zipcodeInput.val().trim()
