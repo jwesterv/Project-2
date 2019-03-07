@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png"
+        href="https://png.pngtree.com/element_origin_min_pic/17/02/16/a37ea51ac385c9920c6994529a745f04.jpg">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -64,8 +66,17 @@
         <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
             <div class="container"><a class="navbar-brand" href="#">FarmAssist</a><button class="navbar-toggler"
                     data-toggle="collapse" data-target="#navcol-1"></button>
-                <div class="collapse navbar-collapse" id="navcol-1"><a class="btn btn-primary ml-auto" role="button"
-                        href="#">Sign In</a></div>
+                    <div class="login">
+                            Email:
+                            <input id="email" /> Password:
+                            <input id="password" />
+                            <button id="submit" class="btn btn-primary">Sign In!</button>
+                        </div>
+                        <div class="redirect" style="display: none">
+                            Redirecting now...
+                            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                            <span class="sr-only">Loading...</span>
+                        </div>
             </div>
         </nav>
         <header class="masthead text-white text-center">
@@ -258,6 +269,32 @@
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
         <script src="/assets/js/script.min.js?h=82d712d5e0811380f26d2753ca68c860"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $("#submit").on("click", function (e) {
+                e.preventDefault();
+                var email = $("#email").val();
+                var password = $("#password").val();
+    
+                axios.post("/auth/login", {
+                    email: email,
+                    password: password
+                })
+                    .then(function (resp) {
+                        console.log(resp);
+                        window.localStorage.setItem("token", resp.data.token);
+                        $(".login").hide();
+                        $(".redirect").show();
+                        window.setTimeout(function () {
+                            window.location.assign("/check.html")
+                        }, 2000)
+                    })
+                    .catch(function (err) {
+                        console.error(err);
+                    })
+            })
+        </script>
     </body>
 
     </html>
