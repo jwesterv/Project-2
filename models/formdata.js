@@ -1,5 +1,5 @@
 var Sequelize = require("sequelize");
-var sequelize = require("../config/connection");
+var sequelize = require("../config/connection.js");
 
 var Formdata = sequelize.define("Formdata", {
   first_name: Sequelize.STRING,
