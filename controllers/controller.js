@@ -2,22 +2,22 @@
 //========================
 var express = require("express");
 var router = express.Router();
-var Farms = require("../models/farms");
+var Farm = require("../models/farms");
 
 //Main
 //========================
-router.get("/consumer", function (req, res) {
+router.get("/api/farms", function (req, res) {
 
-    Farms.findAll({})
+    Farm.findAll({})
         .then(function (results) {
-console.log(results);
+            console.log(results);
             res.json(results);
         });
 
     //create a farm, push to mysql, redirect to / consumer
     // router.post("/api/create", function (req, res) {
 
-    //     Farms.create(
+    //     Farm.create(
     //         {
     //             farm_name: req.body.farmNameText,
     //             img_src = req.body.imageText,
@@ -56,15 +56,13 @@ console.log(results);
 
     //update the db to devoured true
     router.post("/api/update/:id", function (req, res) {
-        Burger.update({
-            devoured: 1
-        }, {
-                where: {
-                    id: req.params.id
-                }
-            }).then(function (results) {
-                res.end();
-            })
+        Farm.update({
+            where: {
+                id: req.params.id
+            }
+        }).then(function (results) {
+            res.end();
+        })
 
     });
 
