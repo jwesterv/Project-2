@@ -62,7 +62,7 @@
             <div class="login">
                 Email:
                 <input id="email" /> Password:
-                <input id="password" />
+                <input id="password" type="password" />
                 <button id="submit" class="btn btn-primary">Sign In!</button>
             </div>
             <div class="redirect" style="display: none">
@@ -276,7 +276,7 @@
     <script src="/assets/js/script.min.js?h=82d712d5e0811380f26d2753ca68c860"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script>
+    <script>
             $("#submit").on("click", function (e) {
                 e.preventDefault();
                 var email = $("#email").val();
@@ -292,14 +292,14 @@
                         $(".login").hide();
                         $(".redirect").show();
                         window.setTimeout(function () {
-                            window.location.assign("/check.html")
+                            window.location.assign("/profile")
                         }, 2000)
                     })
                     .catch(function (err) {
                         console.error(err);
                     })
             })
-        </script> -->
+        </script>
 
 
     <!-- Optional JavaScript -->
