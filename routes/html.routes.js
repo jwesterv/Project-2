@@ -14,10 +14,10 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  // //Login route
-  // app.get("/login", function (req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/login.html"));
-  // });
+  //Login route
+  app.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
 
   //Form route
   app.get("/form", function (req, res) {
@@ -29,10 +29,10 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   });
 
-  // //Consumer route
-  // app.get("/consumer", function (req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/consumer.html"));
-  // });
+  //Consumer route
+  app.get("/consumer", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/consumer.html"));
+  });
 
   //Path holder
   app.get("/", function (req, res) {

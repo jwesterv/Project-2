@@ -27,7 +27,7 @@ console.log(user);
 
 router.post("/login", function(req, res) {
     if(!req.body.password || !req.body.email) {
-        return res.status(400).json({msg: new Error("Please put all data on body")});
+        return res.status(400).json({msg: new Error("Please fill out information")});
     }
     models.User.findOne({
         where : {
@@ -48,7 +48,7 @@ router.post("/login", function(req, res) {
             });
         }
         else {
-            throw new Error("password no matchy");
+            throw new Error("password not a match");
         }
     })
     .catch(function(err) {
