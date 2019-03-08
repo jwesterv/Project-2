@@ -17,22 +17,6 @@ $.ajax("/consumer/" {
 )
 
 
-  $.ajax("/consumer/"({
-    type: "GET",
-    data: "data"
-  })
-    .then(
-      function () {
-        location.assign("consumer.html");
-      })
-    .catch(
-      function (err) {
-        if (err) throw err;
-      }
-    )
-});
-
-
 
 // // Get references to page elements
 // var $exampleText = $("#example-text");
