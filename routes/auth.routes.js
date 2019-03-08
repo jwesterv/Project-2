@@ -5,6 +5,8 @@ var models = require("../models");
 var crypto = require("crypto");
 var jwt = require('jsonwebtoken');
 
+console.log("test")
+
 router.post("/register", function (req, res) {
     if (!req.body.name || !req.body.password || !req.body.email) {
         return res.status(400).json({ msg: new Error("Please put all data on body") });
@@ -61,5 +63,6 @@ router.post("login", function (req, res) {
             res.status(400).json({ msg: err.toString() });
         })
 })
+
 
 module.exports = router;
