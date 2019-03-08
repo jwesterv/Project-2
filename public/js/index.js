@@ -2,7 +2,7 @@ $(".searchBtn").on("click", function(event) {
   event.preventDefault();
   var zipcode = $("#zipInput").val().trim();
  
-$.ajax("/consumer/" ,{q
+$.ajax("/consumer/" ,{
   
   type: "GET",
   data: zipcode
