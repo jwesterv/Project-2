@@ -49,57 +49,57 @@ $(document).ready(function () {
 
     console.log(newFormdata);
 
-    if (updating) {
-        newFormdata.id = formDataId;
-        updatePost(newFormdata);
-    }
-    else {
-        submitPost(newFormdata);
-    };
+    // if (updating) {
+    //     newFormdata.id = formDataId;
+    //     updatePost(newFormdata);
+    // }
+    // else {
+    //     submitPost(newFormdata);
+    // };
 
-    // Submits a form and redirect user to blog page upon completion
-    function submitPost(Formdata) {
-        $.post("/api/posts/", Formdata, function () {
-            window.location.href = "/profile";
-        });
-    };
+    // // Submits a form and redirect user to blog page upon completion
+    // function submitPost(Formdata) {
+    //     $.post("/api/posts/", Formdata, function () {
+    //         window.location.href = "/profile";
+    //     });
+    // };
 
-    // Gets post data for a post if we're editing
-    function getPostData(id) {
-        $.get("/api/posts/" + id, function (data) {
-            if (data) {
-                // If this post exists, prefill our cms forms with its data
-                firstNameInput.val().trim();
-                lastNameInput.val().trim();
-                farmNameInput.val().trim();
-                descriptionInput.val().trim();
-                optionInput.val().trim();
-                deliverInput.val().trim();
-                phoneInput.val().trim();
-                emailInput.val().trim();
-                websiteInput.val().trim();
-                farmAddressInput.val().trim();
-                cityInput.val().trim();
-                stateInput.val().trim();
-                zipcodeInput.val().trim()
-                // If we have a post with this id, set a flag for us to know to update the post
-                // when we hit submit
-                updating = true;
-            }
-        });
-    }
+    // // Gets post data for a post if we're editing
+    // function getPostData(id) {
+    //     $.get("/api/posts/" + id, function (data) {
+    //         if (data) {
+    //             // If this post exists, prefill our cms forms with its data
+    //             firstNameInput.val().trim();
+    //             lastNameInput.val().trim();
+    //             farmNameInput.val().trim();
+    //             descriptionInput.val().trim();
+    //             optionInput.val().trim();
+    //             deliverInput.val().trim();
+    //             phoneInput.val().trim();
+    //             emailInput.val().trim();
+    //             websiteInput.val().trim();
+    //             farmAddressInput.val().trim();
+    //             cityInput.val().trim();
+    //             stateInput.val().trim();
+    //             zipcodeInput.val().trim()
+    //             // If we have a post with this id, set a flag for us to know to update the post
+    //             // when we hit submit
+    //             updating = true;
+    //         }
+    //     });
+    // }
 
-    // Update a given post, bring user to the profile page when done
-    function updatePost(post) {
-        $.ajax({
-            method: "PUT",
-            url: "/api/posts",
-            data: post
-        })
-            .then(function () {
-                window.location.href = "/profile";
-            });
-    }
+    // // Update a given post, bring user to the profile page when done
+    // function updatePost(post) {
+    //     $.ajax({
+    //         method: "PUT",
+    //         url: "/api/posts",
+    //         data: post
+    //     })
+    //         .then(function () {
+    //             window.location.href = "/profile";
+    //         });
+    // }
 
 
 

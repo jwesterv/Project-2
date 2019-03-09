@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-<head profile="http://www.w3.org/2005/10/profile">
+<head>
     <link rel="icon" type="image/png"
         href="https://png.pngtree.com/element_origin_min_pic/17/02/16/a37ea51ac385c9920c6994529a745f04.jpg">
     <!-- Required meta tags -->
@@ -11,33 +11,27 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
 
     <title>FARMASSIST</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Farmer</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=bece14caaca9ad4d9ab55dfcbeed6f4f">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Home - Farmer</title>
-        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=bece14caaca9ad4d9ab55dfcbeed6f4f">
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
-
-    <body>
-
-        <!-- <h1>Welcome to FarmAssist!</h1>
+    <!-- <h1>Welcome to FarmAssist!</h1>
     
           Search Local Farm Nearest You:<br>
           <input type="text" name="local" value="Enter city or zipcode">
@@ -53,15 +47,16 @@
           The user will be redirected to a page showing all farms within their criteria-->
 
 
-        <!--           
+    <!--           
           <Button><a href="login.html">Vendor Login</a></Button> <br><br>
       
           First the user will be directed to a page to create a login,
           then they can update their profile via farmform.html -->
-        <!-- <Button>Create an account for your farm</Button>
+    <!-- <Button>Create an account for your farm</Button>
    
           This will update the SQL table, and also the user should see their farm info and reviews when they login -->
 
+<<<<<<< HEAD
         <!-- To edit an existing profile -->
         
         <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
@@ -98,195 +93,235 @@
                             </div>
                         </form>
                     </div>
+=======
+    <!-- To edit an existing profile -->
+    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+        <div class="container"><a class="navbar-brand" href="#">OC Community FarmAssist</a><button
+                class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"></button>
+            <div class="login">
+                Email:
+                <input id="email" /> Password:
+                <input id="password" type="password" />
+                <button id="submit" class="btn btn-primary">Sign In!</button>
+            </div>
+            <div class="redirect" style="display: none">
+                Redirecting now...
+                <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h1 class="mb-5">Local Meat, Dairy, and Produce Delivered Right to Your Door!</h1>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0"><input id="zipInput"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"class="form-control form-control-lg" type="number"
+                                    maxLength="5" placeholder="Enter your zipcode..."></div>
+                            <div class="col-12 col-md-3"><button id="searchBtn" class="btn btn-primary btn-block btn-lg"
+                                    type="submit">Search!</button></div>
+                        </div>
+                    </form>
+>>>>>>> 19b78b9e77f9922ed95aaebdda85f8b9d562ec5e
                 </div>
             </div>
-        </header>
-        <section class="features-icons bg-light text-center">
+        </div>
+    </header>
+    <section class="features-icons bg-light text-center">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
-                            <div class="d-flex features-icons-icon"><i class="icon-screen-desktop m-auto text-primary"
-                                    data-bs-hover-animate="pulse"></i></div>
-                            <h3>SUBSCRIBE</h3>
-                            <p class="lead mb-0">Enter your zipcode to find and subscribe to local farms</p>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="icon-screen-desktop m-auto text-primary"
+                                data-bs-hover-animate="pulse"></i></div>
+                        <h3>SUBSCRIBE</h3>
+                        <p class="lead mb-0">Enter your zipcode to find and subscribe to local farms</p>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
-                            <div class="d-flex features-icons-icon"><i class="fas fa-seedling m-auto text-primary"
-                                    data-bs-hover-animate="pulse"></i></div>
-                            <h3>HARVEST</h3>
-                            <p class="lead mb-0">After recieving your order, your farmer will harvest and deliver
-                                on their listed delivery day</p>
-                        </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-seedling m-auto text-primary"
+                                data-bs-hover-animate="pulse"></i></div>
+                        <h3>HARVEST</h3>
+                        <p class="lead mb-0">After recieving your order, your farmer will harvest and deliver
+                            on their listed delivery day</p>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
-                            <div class="d-flex features-icons-icon"><i class="fas fa-utensil-spoon m-auto text-primary"
-                                    data-bs-hover-animate="pulse"></i></div>
-                            <h3>EAT</h3>
-                            <p class="lead mb-0">Enjoy FRESH, LOCAL food with friends and family every week!</p>
-                        </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="fas fa-utensil-spoon m-auto text-primary"
+                                data-bs-hover-animate="pulse"></i></div>
+                        <h3>EAT</h3>
+                        <p class="lead mb-0">Enjoy FRESH, LOCAL food with friends and family every week!</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-        </section>
-        <section class="showcase">
-            <div class="mr-5 ml-5 mt-5 mb-5">
-                <h1 class="text-center text-justify">Urban Farms?</h1>
-                <p class="lead mb-0">In 2008, Philadelphia’s 226 communityand squatter gardens grew roughly 2 million
-                    pounds of mid-summer vegetables and herbs, worth $4.9 million. Running at full bore, Brooklyn’s 
-                    Added-Value Farm, which occupies 2.75 acres, funnels 40,000 pounds of fruit and vegetables into the 
-                    low-income neighborhood of Red Hook.
+    </section>
+    <section class="showcase">
+        <div class="mr-5 ml-5 mt-5 mb-5">
+            <h1 class="text-center text-justify">Urban Farms?</h1>
+            <p class="lead mb-0">In 2008, Philadelphia’s 226 communityand squatter gardens grew roughly 2 million
+                pounds of mid-summer vegetables and herbs, worth $4.9 million. Running at full bore, Brooklyn’s
+                Added-Value Farm, which occupies 2.75 acres, funnels 40,000 pounds of fruit and vegetables into the
+                low-income neighborhood of Red Hook.
 
-                    And in Camden, New Jersey — an extremely poor city of 80,000 with only one full-service supermarket
-                    — community gardeners at 44 sites harvested almost 31,000 pounds of vegetables during an unusually wet and cold
-                    summer. That’s enough food during the growing season to feed 508 people three servings a day.</p>
-            </div>
+                And in Camden, New Jersey — an extremely poor city of 80,000 with only one full-service supermarket
+                — community gardeners at 44 sites harvested almost 31,000 pounds of vegetables during an unusually
+                wet and cold
+                summer. That’s enough food during the growing season to feed 508 people three servings a day.</p>
+        </div>
 
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img"><img
-                            src="assets/img/UF-Page_header-1030x1030.jpg" height="550" width="750"></div>
-                    <div class="col-lg-6 my-auto order-lg-1 showcase-text text-justify">
-                        <h2>Environmental Impacts</h2>
-                        <p class="lead mb-0"> Industrial agriculture is a major source of fossil fuel pollution.
-                            Petrochemicals are used to fertilize, spray, and preserve food. Plastics made from oil
-                            are used to package the food, and gasoline is used to transport food worldwide. Urban
-                            farming unplugs us from oil by minimizing the transport footprint and using organic
-                            cultivation methods.
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img"><img
+                        src="assets/img/UF-Page_header-1030x1030.jpg" height="550" width="750"></div>
+                <div class="col-lg-6 my-auto order-lg-1 showcase-text text-justify">
+                    <h2>Environmental Impacts</h2>
+                    <p class="lead mb-0"> Industrial agriculture is a major source of fossil fuel pollution.
+                        Petrochemicals are used to fertilize, spray, and preserve food. Plastics made from oil
+                        are used to package the food, and gasoline is used to transport food worldwide. Urban
+                        farming unplugs us from oil by minimizing the transport footprint and using organic
+                        cultivation methods.
 
-                            While industrial agriculture often maneuvers to avoid paying for environmental
-                            externalities, urban farmers directly bear the ecological costs of their actions.
-                            This makes urban farmers better stewards of their land because they draw their nutrition
-                            from it. Rather than using chemicals that destroy soil biology, urban farming culture
-                            stresses
-                            sustainable organic techniques that enrich the topsoil. </p>
+                        While industrial agriculture often maneuvers to avoid paying for environmental
+                        externalities, urban farmers directly bear the ecological costs of their actions.
+                        This makes urban farmers better stewards of their land because they draw their nutrition
+                        from it. Rather than using chemicals that destroy soil biology, urban farming culture
+                        stresses
+                        sustainable organic techniques that enrich the topsoil. </p>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-6 text-white showcase-img"><img
+                        src="assets/img/orange-tree-stock-image-royalty-free-image-657096990-1532470398.jpg"
+                        height="550" width="750"></div>
+                <div class="col-lg-6 my-auto order-lg-1 showcase-text">
+                    <h2>Keeping it Local</h2>
+                    <p class="lead mb-0 text-justify">Local food supports the local economy. The money that is spent
+                        with local farmers and
+                        growers all stays close to home and is reinvested with businesses and services in your
+                        community. Also, local growers can tell you how the food was grown. You can ask what
+                        practices they use
+                        to raise and harvest the crops. When you know where your food comes from and who grew it,
+                        you know a lot more about that food.</p>
+                    <p></p>
+                    <p class="lead mb-0 text-justify">
+                    </p>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-6 order-lg-2 text-white showcase-img"><img src="assets/img/farmshare.jpg"
+                        height="550" width="750"></div>
+                <div class="col-lg-6 my-auto order-lg-1 showcase-text">
+                    <h2><strong>Flavor</strong></h2>
+                    <p class="lead mb-0 text-justify">Eating local food is eating seasonally. Even though we wish
+                        strawberries were
+                        grown year round, the best time to eat them is when they can be purchased directly
+                        from a local grower. They are full of flavor and taste better than the ones available in the
+                        winter that have traveled thousands of miles and picked before they were ripe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials text-center bg-light">
+        <div class="container">
+            <h2 class="mb-5">What people are saying...</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
+                            src="/assets/img/testimonials-1.jpg?h=c9a15635305654b24ce5a3055e22f73e">
+                        <h5>Elodie L.</h5>
+                        <p class="font-weight-light mb-0">"This is fantastic! I have fresh unicorn meat delivered to
+                            my door every Sunday morning!"</p>
                     </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col-lg-6 text-white showcase-img"><img
-                            src="assets/img/orange-tree-stock-image-royalty-free-image-657096990-1532470398.jpg"
-                            height="550" width="750"></div>
-                    <div class="col-lg-6 my-auto order-lg-1 showcase-text">
-                        <h2>Keeping it Local</h2>
-                        <p class="lead mb-0 text-justify">Local food supports the local economy. The money that is spent with local farmers and 
-                                growers all stays close to home and is reinvested with businesses and services in your 
-                                community. Also, local growers can tell you how the food was grown. You can ask what practices they use 
-                                to raise and harvest the crops. When you know where your food comes from and who grew it, 
-                                you know a lot more about that food.</p>
-                            <p></p>
-                            <p class="lead mb-0 text-justify">
-                            </p>
+                <div class="col-lg-4">
+                    <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
+                            src="/assets/img/testimonials-2.jpg?h=2f7c16e307b7da2bdf38d580d9a3fed9">
+                        <h5>Fred S.</h5>
+                        <p class="font-weight-light mb-0">"I no longer have to worry about going to the store to
+                            stay stocked on vegetibles. I have a mixed pallet of fresh veggies delivered every
+                            Monday!"</p>
                     </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img"><img src="assets/img/farmshare.jpg"
-                            height="550" width="750"></div>
-                    <div class="col-lg-6 my-auto order-lg-1 showcase-text">
-                        <h2><strong>Flavor</strong></h2>
-                        <p class="lead mb-0 text-justify">Eating local food is eating seasonally. Even though we wish strawberries were 
-                                grown year round, the best time to eat them is when they can be purchased directly 
-                                from a local grower. They are full of flavor and taste better than the ones available in the 
-                                winter that have traveled thousands of miles and picked before they were ripe.</p>
+                <div class="col-lg-4">
+                    <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
+                            src="/assets/img/testimonials-3.jpg?h=39503ac082e01a410b496ed9ce0df8e6">
+                        <h5>Sarah W.</h5>
+                        <p class="font-weight-light mb-0">"Thanks so much for making these free resources available
+                            to us!"</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="testimonials text-center bg-light">
-            <div class="container">
-                <h2 class="mb-5">What people are saying...</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
-                                src="/assets/img/testimonials-1.jpg?h=c9a15635305654b24ce5a3055e22f73e">
-                            <h5>Elodie L.</h5>
-                            <p class="font-weight-light mb-0">"This is fantastic! I have fresh unicorn meat delivered to
-                                my door every Sunday morning!"</p>
+        </div>
+    </section>
+    <section class="call-to-action text-white text-center"
+        style="background:url(&quot;/assets/img/New_crops-Chicago_urban_farm.jpg?h=0b0bdb31e7c5175979a6f23d8a040761&quot;) no-repeat center center;background-size:cover;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h2 class="mb-4">Ready to eat fresh produce?</h2>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg"
+                                    type="email" placeholder="Enter your zipcode..."></div>
+                            <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg"
+                                    type="submit">Search!</button></div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
-                                src="/assets/img/testimonials-2.jpg?h=2f7c16e307b7da2bdf38d580d9a3fed9">
-                            <h5>Fred S.</h5>
-                            <p class="font-weight-light mb-0">"I no longer have to worry about going to the store to
-                                stay stocked on vegetibles. I have a mixed pallet of fresh veggies delivered every
-                                Monday!"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3"
-                                src="/assets/img/testimonials-3.jpg?h=39503ac082e01a410b496ed9ce0df8e6">
-                            <h5>Sarah W.</h5>
-                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available
-                                to us!"</p>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </section>
-        <section class="call-to-action text-white text-center"
-            style="background:url(&quot;/assets/img/New_crops-Chicago_urban_farm.jpg?h=0b0bdb31e7c5175979a6f23d8a040761&quot;) no-repeat center center;background-size:cover;">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-9 mx-auto">
-                        <h2 class="mb-4">Ready to eat fresh produce?</h2>
-                    </div>
-                    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                        <form>
-                            <div class="form-row">
-                                <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg"
-                                        type="email" placeholder="Enter your zipcode..."></div>
-                                <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg"
-                                        type="submit">Search!</button></div>
-                            </div>
-                        </form>
-                    </div>
+        </div>
+    </section>
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Contact</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Terms of &nbsp;Use</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-muted small mb-4 mb-lg-0">© FarmAssist 2019. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <footer class="footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#">About</a></li>
-                            <li class="list-inline-item"><span>⋅</span></li>
-                            <li class="list-inline-item"><a href="#">Contact</a></li>
-                            <li class="list-inline-item"><span>⋅</span></li>
-                            <li class="list-inline-item"><a href="#">Terms of &nbsp;Use</a></li>
-                            <li class="list-inline-item"><span>⋅</span></li>
-                            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">© FarmAssist 2019. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        <script src="/assets/js/script.min.js?h=82d712d5e0811380f26d2753ca68c860"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/script.min.js?h=82d712d5e0811380f26d2753ca68c860"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
             $("#submit").on("click", function (e) {
                 e.preventDefault();
                 var email = $("#email").val();
                 var password = $("#password").val();
-    
+
                 axios.post("/auth/login", {
                     email: email,
                     password: password
@@ -297,20 +332,16 @@
                         $(".login").hide();
                         $(".redirect").show();
                         window.setTimeout(function () {
-                            window.location.assign("/check.html")
+                            window.location.assign("/profile")
                         }, 2000)
                     })
                     .catch(function (err) {
                         console.error(err);
                     })
             })
+
+        
         </script>
-    </body>
-
-    </html>
-
-
-
 
 
     <!-- Optional JavaScript -->
@@ -324,6 +355,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+    <script src="js/index.js"></script>    
 </body>
 
 </html>

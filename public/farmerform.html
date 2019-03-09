@@ -44,18 +44,26 @@
         }
 
         #submit {
-            margin-left: 20px
+            margin-left: 20px;
+            color: black;
         }
     </style>
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="row">
            
         
         
     </div>
 
+=======
+
+    <!-- javascript page: based on ids for each input, make an object and place all values into it -->
+    <!-- use jquery selector to get value of input -->
+    <!-- use $ - go to api giphy example - we are using sequelize (tool to interact with database) to make our own api -->
+>>>>>>> 19b78b9e77f9922ed95aaebdda85f8b9d562ec5e
     <form>
 
         <div class="row">
@@ -67,20 +75,18 @@
 
             <div class="col-lg-3 fields">
 
-                <p class="white">First Name:</p>
-                <input id="firstname" type="text" name="firstname">
+                <p class="white">Name:</p>
+                <input id="name" type="text" name="name">
                 <br><br>
-                <p class="white">Last Name:</p>
-                <input id="lastname" type="text" name="lastname">
-                <br><br>
-                <p class="white">Company:</p>
+                
+                <p class="white">Organization:</p>
                 <input id="farmname" type="text" name="farmname">
                 <br><br>
                 <p class="white">Tell us a little about yourself:</p>
                 <textarea id="description" name="description" rows="5" cols="30"></textarea>
                 <br><br>
-                <p class="white">Upload Image</p>
-                <input type="file" name="pic" accept="image/*">
+                <p class="white">Choose a password</p>
+                <input id="password" type="password" name="password">
                 <br><br>
 
 
@@ -189,8 +195,8 @@
                 Zip Code:<br>
                 <input id="zipcode" type="text" name="zipcode">
 
-                <!-- submit button -->
-                <button id="submit" class="btn btn-primary">Submit>></button>
+                
+                <input type="submit" id="submit" value="Submit>>">
 
 
             </div>
