@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
+
 
     <title>FARMASSIST</title>
 
@@ -56,58 +56,29 @@
    
           This will update the SQL table, and also the user should see their farm info and reviews when they login -->
 
-<<<<<<< HEAD
-        <!-- To edit an existing profile -->
-        
-        <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
-            <div class="container"><a class="navbar-brand" href="#">FarmAssist</a>
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"></button>
-                    <div class="login">
-                            Email:
-                            <input id="email" /> Password:
-                            <input id="password" />
-                            <button id="submit" class="btn btn-primary">Login</button>
-                        </div>
-                        <div class="redirect" style="display: none">
-                            Redirecting now...
-                            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
-                            <span class="sr-only">Loading...</span>
-                        </div>
-            </div>
-        </nav>
-        <header class="masthead text-white text-center">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-10 mx-auto">
-                        <p><h1 class="font-italic">LOCAL</h1><h2 class="mb-5"> Meat, Dairy, and Produce</h2></p>
-                        <h5 class="mb-5">Delivered Right to Your Door!</h5>
-                    </div>
-                    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                        <form>
-                            <div class="form-row">
-                                <div class="col-12 col-md-9 mb-2 mb-md-0"><input id = "zipInput" class="form-control form-control-lg"
-                                        type="search" placeholder="Enter your zipcode..."></div>
-                                <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg"
-                                        type="submit">Search!</button></div>
-                            </div>
-                        </form>
-                    </div>
-=======
     <!-- To edit an existing profile -->
+
     <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
-        <div class="container"><a class="navbar-brand" href="#">OC Community FarmAssist</a><button
-                class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"></button>
+        <div class="container"><a class="navbar-brand" href="#">FarmAssist</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"></button>
             <div class="login">
                 Email:
                 <input id="email" /> Password:
-                <input id="password" type="password" />
-                <button id="submit" class="btn btn-primary">Sign In!</button>
+                <input id="password" />
+                <button id="submit" class="btn btn-primary">Login</button>
             </div>
             <div class="redirect" style="display: none">
                 Redirecting now...
                 <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
                 <span class="sr-only">Loading...</span>
+            </div>
+
+            <div>
+                <button>
+                        <a href="/registration"> 
+                        Vendor Sign-Up
+                        </a>
+                </button>
             </div>
         </div>
     </nav>
@@ -115,22 +86,28 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <h1 class="mb-5">Local Meat, Dairy, and Produce Delivered Right to Your Door!</h1>
+                <div class="col-xl-10 mx-auto">
+                    <p>
+                        <h1 class="font-italic">LOCAL</h1>
+                        <h2 class="mb-5"> Meat, Dairy, and Produce</h2>
+                    </p>
+                    <h5 class="mb-5">Delivered Right to Your Door!</h5>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                     <form>
                         <div class="form-row">
                             <div class="col-12 col-md-9 mb-2 mb-md-0"><input id="zipInput"
-                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"class="form-control form-control-lg" type="number"
-                                    maxLength="5" placeholder="Enter your zipcode..."></div>
-                            <div class="col-12 col-md-3"><button id="searchBtn" class="btn btn-primary btn-block btn-lg"
+                                    class="form-control form-control-lg" type="search"
+                                    placeholder="Enter your zipcode..."></div>
+                            <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg"
                                     type="submit">Search!</button></div>
+
+                            
                         </div>
                     </form>
->>>>>>> 19b78b9e77f9922ed95aaebdda85f8b9d562ec5e
                 </div>
             </div>
+        </div>
         </div>
     </header>
     <section class="features-icons bg-light text-center">
@@ -249,7 +226,9 @@
                             src="/assets/img/testimonials-2.jpg?h=2f7c16e307b7da2bdf38d580d9a3fed9">
                         <h5>Anthony R.</h5>
                         <p class="font-weight-light mb-0">"I no longer have to worry about going to the store to
-                            stay stocked on super healthy diet food. I have a mixed pallet of farm fresh cage free eggs, organic veggies and grass fed beef delivered right to my door! Thank you Farm-Assist, for helping me achieve my ideal figure!"</p>
+                            stay stocked on super healthy diet food. I have a mixed pallet of farm fresh cage free eggs,
+                            organic veggies and grass fed beef delivered right to my door! Thank you Farm-Assist, for
+                            helping me achieve my ideal figure!"</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -316,31 +295,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-            $("#submit").on("click", function (e) {
-                e.preventDefault();
-                var email = $("#email").val();
-                var password = $("#password").val();
+        $("#submit").on("click", function (e) {
+            e.preventDefault();
+            var email = $("#email").val();
+            var password = $("#password").val();
 
-                axios.post("/auth/login", {
-                    email: email,
-                    password: password
-                })
-                    .then(function (resp) {
-                        console.log(resp);
-                        window.localStorage.setItem("token", resp.data.token);
-                        $(".login").hide();
-                        $(".redirect").show();
-                        window.setTimeout(function () {
-                            window.location.assign("/profile")
-                        }, 2000)
-                    })
-                    .catch(function (err) {
-                        console.error(err);
-                    })
+            axios.post("/auth/login", {
+                email: email,
+                password: password
             })
+                .then(function (resp) {
+                    console.log(resp);
+                    window.localStorage.setItem("token", resp.data.token);
+                    $(".login").hide();
+                    $(".redirect").show();
+                    window.setTimeout(function () {
+                        window.location.assign("/profile")
+                    }, 2000)
+                })
+                .catch(function (err) {
+                    console.error(err);
+                })
+        })
 
-        
-        </script>
+
+    </script>
 
 
     <!-- Optional JavaScript -->
@@ -355,7 +334,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-    <script src="js/index.js"></script>    
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -39,6 +39,16 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/terms.html"));
   })
 
+  //Privacy Notice route
+  app.get("/privacy", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/privacy.html"));
+  })
+
+  //Vendor Registration route
+  app.get("/registration", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/registration.html"));
+  })
+
   //Path holder
   app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/"));
