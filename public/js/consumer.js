@@ -11,7 +11,9 @@ let zipcode = url.replace("?q=", '');
   })
   .then(
     function() {
-       $("#farm").val()
+      $.get("/api/farms/" + zipcode,function(data){
+      console.log(data);
+      })
       })
   .catch(
       function(err){
