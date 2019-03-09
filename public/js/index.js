@@ -1,3 +1,4 @@
+
 $(".searchBtn").on("click", function(event) {
   event.preventDefault();
   var zipcode = $(".zipInput").val().trim();
