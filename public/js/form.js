@@ -36,14 +36,14 @@ $(document).ready(function () {
         last_name: lastNameInput.val().trim(),
         farm_name: farmNameInput.val().trim(),
         description: descriptionInput.val().trim(),
-        option: optionInput.val().trim(),
-        deliver: deliverInput.val().trim(),
+        option: optionInput.val(),
+        deliver: deliverInput.val(),
         phone: phoneInput.val().trim(),
         email: emailInput.val().trim(),
         website: websiteInput.val().trim(),
         farm_address: farmAddressInput.val().trim(),
         city: cityInput.val().trim(),
-        state: stateInput.val().trim(),
+        state: stateInput.val(),
         zipcode: zipcodeInput.val().trim()
     };
 

@@ -1,6 +1,7 @@
-$("#searchBtn").on("click", function(event) {
+
+$(".searchBtn").on("click", function(event) {
   event.preventDefault();
-  var zipcode = $("#zipInput").val().trim();
+  var zipcode = $(".zipInput").val().trim();
  
   console.log(zipcode);
 
