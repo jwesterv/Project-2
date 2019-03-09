@@ -1,14 +1,9 @@
 require("dotenv").config();
 var express = require("express");
-var jwt = require('express-jwt');
 
-var auth = jwt({
-  secret: process.env.JWT_SECRET,
-  userProperty: 'payload'
-});
 var db = require("./models");
-var authRoutes = require("./routes/auth.routes");
-var apiRoutes = require("./routes/api.routes");
+
+// var apiRoutes = require("./routes/api.routes");
 var Routes = require("./controllers/controller");
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -21,9 +16,8 @@ app.use(express.static("public"));
 
 // Routes
 require("./routes/html.routes")(app);
-app.use("/auth", authRoutes);
-app.use(auth);
-app.use("/api", apiRoutes);
+
+// app.use("/api", apiRoutes);
 app.use(Routes);
 
 var syncOptions = { force: false };

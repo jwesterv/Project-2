@@ -17,6 +17,16 @@ module.exports = function (app) {
   //Login route
   app.get("/login", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
+    var jwt = require('express-jwt');
+
+var auth = jwt({
+  secret: process.env.JWT_SECRET,
+  userProperty: 'payload'
+});
+var authRoutes = require("../routes/auth.routes");
+app.use("/auth", authRoutes);
+app.use(auth);
+   
   });
 
   //Form route
@@ -42,6 +52,11 @@ module.exports = function (app) {
   //Privacy Notice route
   app.get("/privacy", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/privacy.html"));
+  })
+
+  //Contact route
+  app.get("/contact", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/contact.html"));
   })
 
   //Vendor Registration route

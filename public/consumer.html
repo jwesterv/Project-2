@@ -82,10 +82,10 @@
                 <p>What else?</p>
             </div>
             <div class="w3-quarter">
-                <img src="https://www.greenroofs.com/wp-content/uploads/2018/09/ryerson_urban_farm9.jpg" alt="Farm"
-                    style="width:100%">
-                <h3 onclick="myFunction()">Farmer 4</h3>
-                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <img src="/assets/img/unicorn.jpg" alt="Farm"
+                    style="width:80%">
+                <h3> <a href="https://elucat9.github.io/unicorn-ranch/">Unicorn Ranch</a></h3>
+                <p>Cupcake ipsium I luv rainbow roll </p>
             </div>
         </div>
 
@@ -127,7 +127,37 @@
                 document.getElementById("mySidebar").style.display = "none";
             }
         </script>
-<script src="js/consumer.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- <script>
+                    $("#submit").on("click", function (e) {
+                        e.preventDefault();
+                        var email = $("#email").val();
+                        var password = $("#password").val();
+            
+                        axios.post("/auth/login", {
+                            email: email,
+                            password: password
+                        })
+                            .then(function (resp) {
+                                console.log(resp);
+                                window.localStorage.setItem("token", resp.data.token);
+                                $(".login").hide();
+                                $(".redirect").show();
+                                window.setTimeout(function () {
+                                    window.location.assign("/profile")
+                                }, 2000)
+                            })
+                            .catch(function (err) {
+                                console.error(err);
+                            })
+                    })
+            
+            
+                </script> -->
+            
+
+            <script src="js/consumer.js"></script>
+
 </body>
 
 </html>

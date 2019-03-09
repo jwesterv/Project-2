@@ -61,7 +61,7 @@
     <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
         <div class="container"><a class="navbar-brand" href="#">FarmAssist</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"></button>
-            <div class="login">
+            <!-- <div class="login">
                 Email:
                 <input id="email" /> Password:
                 <input id="password" />
@@ -71,8 +71,14 @@
                 Redirecting now...
                 <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
                 <span class="sr-only">Loading...</span>
-            </div>
-
+            </div> -->
+            <div>
+                    <button>
+                        <a href="/login">
+                            Farmer Login
+                        </a>
+                    </button>
+                </div>
             <div>
                 <button>
                     <a href="/registration">
@@ -256,7 +262,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                     <form>
                         <div class="form-row">
-                            <div class="col-12 col-md-9 mb-2 mb-md-0"><input
+                            <div class="col-12 col-md-9 mb-2 mb-md-0"><input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                                     class="form-control form-control-lg zipInput" type="number" maxlength="5"
                                     placeholder="Enter your zipcode..."></div>
                             <div class="col-12 col-md-3"><button class="btn btn-primary btn-block btn-lg searchBtn"
@@ -272,23 +278,23 @@
             <div class="row">
                 <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
                     <ul class="list-inline mb-2">
-                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><a href="/index">About</a></li>
                         <li class="list-inline-item"><span>⋅</span></li>
-                        <li class="list-inline-item"><a href="#">Contact</a></li>
+                        <li class="list-inline-item"><a href="/contact">Contact</a></li>
                         <li class="list-inline-item"><span>⋅</span></li>
                         <li class="list-inline-item"><a href="/terms">Terms of &nbsp;Use</a></li>
                         <li class="list-inline-item"><span>⋅</span></li>
-                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="/privacy">Privacy Policy</a></li>
                     </ul>
                     <p class="text-muted small mb-4 mb-lg-0">© FarmAssist 2019. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
-                    <ul class="list-inline mb-0">
+                    <!-- <ul class="list-inline mb-0">
                         <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x fa-fw"></i></a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>
@@ -298,7 +304,7 @@
     <script src="/assets/js/script.min.js?h=82d712d5e0811380f26d2753ca68c860"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
+    <!-- <script>
         $("#submit").on("click", function (e) {
             e.preventDefault();
             var email = $("#email").val();
@@ -314,7 +320,7 @@
                     $(".login").hide();
                     $(".redirect").show();
                     window.setTimeout(function () {
-                        window.location.assign("/profile")
+                        window.location.assign("/")
                     }, 2000)
                 })
                 .catch(function (err) {
@@ -323,7 +329,7 @@
         })
 
 
-    </script>
+    </script> -->
 
 
     <!-- Optional JavaScript -->
