@@ -1,10 +1,11 @@
 $(".searchBtn").on("click", function(event) {
   event.preventDefault();
-  
+  var zipcode = $("#zipInput").val().trim();
  
-$.ajax("/consumer/" {
+$.ajax("/consumer/" ,{
+  
   type: "GET",
-  data: "data"
+  data: zipcode
 })
 .then(
   function() {
