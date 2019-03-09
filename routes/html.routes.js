@@ -44,6 +44,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/privacy.html"));
   })
 
+  //Contact route
+  app.get("/contact", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/contact.html"));
+  })
+
   //Vendor Registration route
   app.get("/registration", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/registration.html"));
