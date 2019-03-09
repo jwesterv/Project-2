@@ -9,7 +9,7 @@ var db = require("../models");
 //========================
 router.get("/api/farms/:zipcode", function (req, res) {
     console.log(req.params)
-    if (req.params.farm) {
+   
 
         db.farm.findAll({
             where: {
@@ -18,12 +18,8 @@ router.get("/api/farms/:zipcode", function (req, res) {
         }).then(function (result) {
             return res.json(result);
         });
-    } else {
-        db.farm.findAll({}).then(function (result) {
-            return res.json(result);
-        });
-    }
-});
+    } 
+);
 
 router.get("/api/farms/", function (req, res) {
     // console.log(res);
@@ -39,7 +35,7 @@ router.post("/api/posts/:zipcode", function (req, res) {
     console.log(req.params.zipcode);
 
 
-    db.farm.findAll({
+    db.farm.findOne({
         where: {
             zipcode: req.params.zipcode
         }

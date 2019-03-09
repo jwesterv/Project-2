@@ -12,8 +12,9 @@ let zipcode = url.replace("?q=", '');
   .then(
     function(res) {
       $.get("/api/farms/" + zipcode,function(data){
-        console.log("test")
-      location.assign("/api/farms")
+        console.log(data)
+        $("#farmReturn").append("<h1>" + data[0].farm_name + "</h1>" + "<p>" + data[0].zipcode + "</p>"+ "<p>" + data[0].id + "</p>");
+      // location.assign("/api/farms/"+ zipcode)
       })
       })
   .catch(
