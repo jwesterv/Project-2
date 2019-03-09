@@ -10,9 +10,10 @@ let zipcode = url.replace("?q=", '');
     data: zipcode
   })
   .then(
-    function() {
+    function(res) {
       $.get("/api/farms/" + zipcode,function(data){
-      console.log(data);
+        console.log("test")
+      location.assign("/api/farms")
       })
       })
   .catch(
