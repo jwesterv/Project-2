@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
 
-    var Farm = sequelize.define("Farm", {
+    var farm = sequelize.define("farm", {
         farm_name: DataTypes.STRING,
         img_src: DataTypes.TEXT,
         zipcode: DataTypes.STRING,
@@ -9,6 +9,6 @@ module.exports = function (sequelize, DataTypes) {
     });
 
 
-    return Farm;
+    return farm;
 };
 

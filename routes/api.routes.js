@@ -19,37 +19,38 @@ router.get("/check", function (req, res) {
 module.exports = function (app) {
 
     // GET route for getting all of the posts
-    app.get("/api/posts/", function (req, res) {
-        db.Farm.findAll({})
-            .then(function (dbPost) {
-                res.json(dbPost);
-                console.log(res);
-            });
-    });
-    // Get route for retrieving a single post
-    // app.get("/api/posts", function (req, res) {
-    //     console.log("res");
-
-    //     db.Farm.findAll({
-    //         where: {
-    //             zipcode: req.params.zipcode
-    //         }
-    //     }).then(function (dbPost) {
-    //         console.log(dbPost);
-    //         res.json(dbPost);
-    //     });
+    // app.get("/api/posts/", function (req, res) {
+    //     console.log(res.body.zipcode)
+    //     db.Farm.findAll({})
+    //         .then(function (dbPost) {
+    //             res.json(dbPost);
+    //             console.log(res);
+    //         });
     // });
+    // Get route for retrieving a single post
+    router.post("/api/posts/:zipcode", function (req, res) {
+        console.log("res");
 
-    // POST route for saving a new post
-    app.post("/api/posts", function (req, res) {
-        db.Farm.create(req.body).then(function (dbPost) {
+        db.farm.findAll({
+            where: {
+                zipcode: req.params.zipcode
+            }
+        }).then(function (dbPost) {
+            console.log(dbPost);
             res.json(dbPost);
         });
     });
 
+    // POST route for saving a new post
+    // app.post("/api/posts", function (req, res) {
+    //     db.Farm.create(req.body).then(function (dbPost) {
+    //         res.json(dbPost);
+    //     });
+    // });
+
     // DELETE route for deleting posts
     app.delete("/api/posts/:id", function (req, res) {
-        db.Farm.destroy({
+        db.farm.destroy({
             where: {
                 id: req.params.id
             }

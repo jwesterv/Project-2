@@ -2,17 +2,21 @@
 //========================
 var express = require("express");
 var router = express.Router();
-var Farm = require("../models/farm.model.js");
-console.log(Farm);
+var farm = require("../models/farm.model.js");
+var db = require("../models");
+
 //Main
 //========================
 router.get("/api/farms", function (req, res) {
-console.log(res);
-    Farm.findAll({})
+    console.log(res);
+    farm.findAll({})
         .then(function (results) {
             console.log(results);
             res.json(results);
         });
+
+
+  
 
     //create a farm, push to mysql, redirect to / consumer
     // router.post("/api/create", function (req, res) {
@@ -56,7 +60,7 @@ console.log(res);
 
     //update the db to devoured true
     router.post("/api/update/:id", function (req, res) {
-        Farm.update({
+        farm.update({
             where: {
                 id: req.params.id
             }
@@ -68,5 +72,18 @@ console.log(res);
 
 
 })
+router.post("/api/posts/:zipcode", function (req, res) {
+    console.log(req.params.zipcode);
+  console.log(db.farm)
+
+    db.farm.findAll({
+        where: {
+            zipcode: req.params.zipcode
+        }
+    }).then(function (dbPost) {
+        console.log(dbPost);
+        res.json(dbPost);
+    });
+});
 //export the routes / router
 module.exports = router;
