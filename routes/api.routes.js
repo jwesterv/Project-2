@@ -7,7 +7,7 @@ var router = express.Router();
 
 // Requiring our models
 
-var models = require("../models");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -24,7 +24,7 @@ module.exports = function (app) {
         if (req.query.author_id) {
             query.AuthorId = req.query.author_id;
         }
-        models.Products.findAll({
+        db.Farm.findAll({
             where: query
         }).then(function (dbPost) {
             res.json(dbPost);
@@ -32,10 +32,12 @@ module.exports = function (app) {
     });
 
     // Get route for retrieving a single post
-    app.get("/api/posts/:id", function (req, res) {
-        models.Products.findOne({
+    app.get("/api/posts", function (req, res) {
+        console.log("res");
+
+        db.Farm.findAll({
             where: {
-                id: req.params.id
+                zipcode: req.params.zipcode
             }
         }).then(function (dbPost) {
             console.log(dbPost);
@@ -45,14 +47,14 @@ module.exports = function (app) {
 
     // POST route for saving a new post
     app.post("/api/posts", function (req, res) {
-        models.Products.create(req.body).then(function (dbPost) {
+        db.Farm.create(req.body).then(function (dbPost) {
             res.json(dbPost);
         });
     });
 
     // DELETE route for deleting posts
     app.delete("/api/posts/:id", function (req, res) {
-        models.Products.destroy({
+        db.Farm.destroy({
             where: {
                 id: req.params.id
             }
