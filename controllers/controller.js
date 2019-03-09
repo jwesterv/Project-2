@@ -74,7 +74,7 @@ router.get("/api/farms", function (req, res) {
 })
 router.post("/api/posts/:zipcode", function (req, res) {
     console.log(req.params.zipcode);
-  console.log(db.farm)
+  
 
     db.farm.findAll({
         where: {

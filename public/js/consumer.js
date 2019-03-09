@@ -11,8 +11,7 @@ let zipcode = url.replace("?q=", '');
   })
   .then(
     function() {
-       console.log("test")
-        location.assign("consumer.html");
+       $("#farm").val()
       })
   .catch(
       function(err){
