@@ -39,9 +39,18 @@ app.use(auth);
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   });
 
+  app.get("/profilenew", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/profilenew.html"));
+  });
+
   //Consumer route
   app.get("/consumer", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/consumer.html"));
+  });
+
+  //Consumer route
+  app.get("/unicornprofile", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/psuedoprofile.html"));
   });
 
   //Terms of Use route
@@ -70,8 +79,8 @@ app.use(auth);
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.redirect("/");
-  });
+  // app.get("*", function (req, res) {
+  //   res.redirect("/");
+  // });
 
 };
