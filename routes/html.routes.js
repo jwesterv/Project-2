@@ -34,6 +34,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/consumer.html"));
   });
 
+  //Terms of Use route
+  app.get("/terms", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/terms.html"));
+  })
+
   //Path holder
   app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/"));
