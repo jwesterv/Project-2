@@ -2,12 +2,12 @@
 //========================
 var express = require("express");
 var router = express.Router();
-var Farm = require("../models/farms");
-
+var Farm = require("../models/farm.model.js");
+console.log(Farm);
 //Main
 //========================
 router.get("/api/farms", function (req, res) {
-
+console.log(res);
     Farm.findAll({})
         .then(function (results) {
             console.log(results);
